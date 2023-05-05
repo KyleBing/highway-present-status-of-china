@@ -1,6 +1,6 @@
 window.onload = _ => {
 
-    let highway = document.querySelector('#highway-road')
+    // Highway Road
     let highwayHtml = ''
     for(let i=0;i<100;i++){
         highwayHtml = highwayHtml + `
@@ -32,6 +32,27 @@ window.onload = _ => {
         </div>
     </div>
 `
-        highway.innerHTML = highwayHtml
+        document.querySelector('.highway-road').innerHTML = highwayHtml
     }
+
+    // Car List
+    let carListHtml = ''
+    carList.forEach(car => {
+        carListHtml = carListHtml + `
+        <div class="car" style="left: ${210 + (200 + 14) * (car.col - 1)}px; top: ${car.top}px">
+            <img src="./img/${car.img}.svg" alt="${car.name}">
+        </div>
+        `
+    })
+    document.querySelector('.car-list').innerHTML = carListHtml
+
+
 }
+
+
+const carList = [
+    {name: '', col: 3, top: 1200, img: 'car_police'},
+    {name: '', col: 1, top: 700, img: 'car'},
+    {name: '', col: 2, top: 900, img: 'car_taxi'},
+    {name: '', col: 3, top: 2100, img: 'car_jeep'},
+]

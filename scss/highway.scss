@@ -15,13 +15,20 @@ body{
     background-color: #404447;
 }
 
-.highway-road {
+.container {
+    margin: 0 auto;
+    position: relative;
+}
 
+.highway-road {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
 }
 
 .highway-section {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .plant-section{
@@ -38,14 +45,11 @@ body{
 .road-block {
     width: 200px;
     height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .road-line {
     height: 250px;
-    width: 15px;
+    width: 12px;
     display: flex;
     align-items: center;
     .line{
@@ -63,5 +67,38 @@ body{
         &.white {
             background-color: white;
         }
+    }
+}
+
+.car-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.car{
+    position: absolute;
+    z-index: 100;
+    width: 110px;
+    img{
+        display: block;
+        width: 100%;
+    }
+    &.car-2{
+        top: 600px;
+        left: 570px + (200 + 20) * 1;
+    }
+    &.car-3{
+        top: 500px;
+        left: 570px + (200 + 20) * 2;
+    }
+    &.car-4{
+        top: 1000px;
+        left: 570px + (200 + 20) * 2;
+    }
+    &.car-5{
+        top: 1200px;
+        left: 570px + (200 + 20) * 0;
     }
 }
