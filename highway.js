@@ -55,4 +55,6 @@ const carList = [
     {name: '', col: 1, top: 700, img: 'car'},
     {name: '', col: 2, top: 900, img: 'car_taxi'},
     {name: '', col: 3, top: 2100, img: 'car_jeep'},
+    {name: '', col: 3, top: 1500, img: 'truck_green'},
+    {name: '', col: 2, top: 2100, img: 'car_yellow'},
 ]
