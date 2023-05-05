@@ -1,0 +1,67 @@
+@import "variables";
+@import "utility";
+@import "gutter";
+
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #404447;
+}
+
+.highway-road {
+
+}
+
+.highway-section {
+    display: flex;
+    justify-content: center;
+}
+
+.plant-section{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        display: block;
+        width: 60%;
+    }
+}
+
+.road-block {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.road-line {
+    height: 250px;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    .line{
+        height: 150px;
+        width: 100%;
+        &.solid {
+            height: 300px;
+        }
+        &.bold{
+            width: 30px;
+        }
+        &.yellow {
+            background-color: $orange;
+        }
+        &.white {
+            background-color: white;
+        }
+    }
+}
