@@ -82,7 +82,7 @@ const sceneList = [
             {name: '',        col: 2,   speed: 100, top: 900,              img: 'car',        dialog: ""},
             {name: '',        col: 3,   speed: 100, top: 2100,             img: 'car_jeep',   dialog: ""},
             {name: '',        col: 3,   speed: 100, top: 1000,             img: 'truck',      dialog: ""},
-            {name: '',        col: 1,   speed: 110, top: 1600,             img: 'car_yellow', dialog: "左边那个，闪不动你了还。在超车道，应该快点走，避免三车并排，可真行，逛上大街了还。速度压的是真稳。"},
+            {name: '',        col: 1,   speed: 110, top: 1600,             img: 'car_yellow', dialog: "左边那个，闪不动你了还。避免三车并行，逛上大街了还。要么加速，要么减速变道。你这速度压的是真稳。"},
         ]
     },
 
@@ -93,7 +93,7 @@ const sceneList = [
             {name: '',        col: 1.4, speed: 105, top:  1100, img: 'car',        dialog: ""},
             {name: '',        col: 3,   speed: 95,  top:  2100, img: 'car_mini',   dialog: "。。。"},
             {name: '',        col: 3,   speed: 95,  top:  1000, img: 'truck',      dialog: ""},
-            {name: '',        col: 1,   speed: 110, top:  1600, img: 'car_yellow', dialog: "靠，这边又来个骑线的，科三是怎么过的。右后方的小绿豆开的都比你好。"},
+            {name: '',        col: 1,   speed: 110, top:  1600, img: 'car_yellow', dialog: "这边又来个骑线的，科三是怎么过的。右后方的小绿豆开的都比你好。"},
         ]
     },
 
@@ -132,23 +132,41 @@ const sceneList = [
         cars: [
             {name: '',        col: 1, speed: 120, top:  1100, img: 'car',        dialog: "那句话真没错，无论你跑多快，总有一个大众会超你。"},
             {name: '',        col: 3,   speed: 95,  top:  1500, img: 'car_mini',   dialog: ""},
-            {name: '',        col: 2,   speed: 150, top:  900, img: 'car_yellow', dialog: "我只是不喜欢跟别人一起跑而已"},
+            {name: '',        col: 2,   speed: 150, top:  900, img: 'car_yellow', dialog: "只是不喜欢跟其它车并行。"},
         ]
     },
 
-    // scene 6   // 我真聪明
+    // scene 6   // 无紧急情况走应急车道
     {
-        title: '我真聪明',
+        title: '无紧急情况走应急车道',
         cars: [
-            {name: '',        col: 1, speed: 120, top:  1100, img: 'car',        dialog: "SB"},
-            {name: '',        col: 4, speed: 120, top:  1100, img: 'car',        dialog: "还是我聪明，妈妈都夸我"},
-            {name: '',        col: 4, speed: 120, top:  1800, img: 'car',        dialog: "我也聪明"},
-            {name: '',        col: 3,   speed: 95,  top:  1500, img: 'car_mini',   dialog: "SB"},
-            {name: '',        col: 1,   speed: 120, top:  1500, img: 'car_yellow', dialog: "SB"},
+            {name: '',        col: 1, speed: 25, top:  800, img: 'car',        dialog: ""},
+            {name: '',        col: 2, speed: 25, top:  900, img: 'car',        dialog: ""},
+            {name: '',        col: 1, speed: 25, top:  1250, img: 'car',        dialog: ""},
+            {name: '',        col: 2, speed: 25, top:  1300, img: 'car',        dialog: ""},
+            {name: '',        col: 2, speed: 25, top:  2000, img: 'car',        dialog: ""},
+            {name: '',        col: 3, speed: 25, top:  1100, img: 'car',        dialog: "SB"},
+            {name: '',        col: 3, speed: 25, top:  1500, img: 'car',        dialog: "SB，快拍照"},
+            {name: '',        col: 3, speed: 25, top:  2100, img: 'truck',        dialog: ""},
+            {name: '',        col: 4, speed: 50, top:  1100, img: 'car',        dialog: "还是我聪明，妈妈都夸我"},
+            {name: '',        col: 4, speed: 50, top:  1800, img: 'car',        dialog: "别人走我也走，又碍着谁"},
+            {name: '',        col: 3,   speed: 20,  top:  800, img: 'car_mini',   dialog: "SB"},
+            {name: '',        col: 1,   speed: 20, top:  1600, img: 'car_yellow', dialog: "建议无故走应急车道直接扣 12 分"},
+            {name: '',        col: 4,   speed: 60, top:  2900, img: 'car_embulas', dialog: "前面什么情况，我车上有病人啊！！！"},
         ]
     },
 
     // scene 7   // 无论你跑多快，总有一个大众会超你
+    {
+        title: '无故刹车',
+        cars: [
+            {name: '',        col: 1, speed: 110, top:  900, img: 'car_break',        dialog: ""},
+            {name: '',        col: 1,   speed: 110, top:  1600, img: 'car_yellow', dialog: "前方无车，也没有限速摄像头，你也没超速，有必要点刹车吗。空气阻力压不住你吗。"},
+            {name: '',        col: 3,   speed: 95,  top:  1500, img: 'car_mini',   dialog: ""},
+        ]
+    },
+
+    // scene last   // 无论你跑多快，总有一个大众会超你
     {
         title: '我',
         cars: [
