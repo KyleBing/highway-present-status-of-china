@@ -11,7 +11,10 @@
     box-sizing: border-box;
 }
 
+$content-width: 150px * 2 + 200 * 4 + 12 * 5;
+
 body{
+    min-width: $content-width;
     background-color: #404447;
 }
 
@@ -23,12 +26,12 @@ body{
 
 .highway-road {
     margin: 0 auto;
-    width: 150px * 2 + 200 * 4 + 12 * 5;
+    width: $content-width;
     position: relative;
 }
 
 .road {
-    width: 150px * 2 + 200 * 4 + 12 * 5;
+    width: $content-width;
 }
 
 .highway-section {
@@ -114,5 +117,38 @@ body{
     position: absolute;
     width: 100%;
     text-align: center;
-    text-shadow: 3px 3px 0 black;
+    text-shadow: 3px 3px 0 transparentize(black, 0.6);
 }
+
+
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-flow: column nowrap;
+    height: 250px;
+    padding-bottom: 30px;
+    background: linear-gradient(60deg, $orange, $yellow, $green, $cyan, $blue, $purple, $red);
+    z-index: 10000;
+    h1{
+        font-size: 80px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 5px 5px 0 transparentize(black, 0.6), 2px 2px 5px transparentize($orange, 0.1);
+    }
+    p{
+        font-size: 13px;
+        margin-top: 20px;
+        color: white;
+        text-shadow: 1px 1px 0 transparentize(black, 0.8);
+    }
+    a{
+        text-shadow: 1px 1px 0 transparentize(black, 0.8);
+        color: white;
+        font-size: 13px;
+    }
+}
+

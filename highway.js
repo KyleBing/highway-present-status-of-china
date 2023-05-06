@@ -2,9 +2,9 @@ window.onload = _ => {
 
     // Highway Road
     let highwayHtml = ''
-    for(let i=0;i<100;i++){
+    for(let i=0;i<120;i++){
         highwayHtml = highwayHtml + `
-    <div class="highway-section" id="${i}">
+    <div class="highway-section">
         <div class="plant-section">
             <img src="plant.png" alt="plant">
         </div>
@@ -41,10 +41,11 @@ window.onload = _ => {
 
         carListHtml = carListHtml + `
         <div 
+            id="${index + 1}"
             class="scene-title" 
-            style="left: ${0}px; top: ${index * sceneGap + 600}px"
+            style="left: ${0}px; top: ${index * sceneGap + 500}px"
         >
-            ${scene.title}
+            ${index + 1}. ${scene.title}
         </div>
         `
 
@@ -70,12 +71,12 @@ window.onload = _ => {
     document.querySelector('.car-list').innerHTML = carListHtml
 }
 
-const sceneGap = 3000
+const sceneGap = 3500
 
 const sceneList = [
-    // scene 1   // 三连堵
+    // scene 1   // 密不透风
     {
-        title: '三连堵',
+        title: '密不透风',
         cars: [
             {name: '',        col: 1,   speed: 100, top: 1100,             img: 'car',        dialog: ""},
             {name: '',        col: 2,   speed: 100, top: 900,              img: 'car',        dialog: ""},
@@ -87,7 +88,7 @@ const sceneList = [
 
     // scene 2   // 骑线
     {
-        title: '骑线',
+        title: '骑士',
         cars: [
             {name: '',        col: 1.4, speed: 105, top:  1100, img: 'car',        dialog: ""},
             {name: '',        col: 3,   speed: 95,  top:  2100, img: 'car_mini',   dialog: "。。。"},
@@ -96,27 +97,28 @@ const sceneList = [
         ]
     },
 
-    // scene 3   // 右侧超车
+    // scene 3   // 移动路障
     {
-        title: '右侧超车',
+        title: '移动路障',
         cars: [
             {name: '',        col: 1, speed: 105, top:  1100, img: 'car',        dialog: ""},
             {name: '',        col: 2, speed: 105, top:  1100, img: 'car',        dialog: ""},
-            {name: '',        col: 3,   speed: 95,  top:  2200, img: 'car_mini',   dialog: ""},
+            {name: '',        col: 3,   speed: 95,  top:  2200, img: 'truck',   dialog: ""},
             {name: '',        col: 3,   speed: 125, top:  1400, img: 'car_yellow', dialog: "我只能从右侧超车了"},
         ]
     },
 
-    // scene 4   // 移动路障
+    // scene 4   // 批量移动路障
     {
-        title: '移动路障',
+        title: '批量移动路障',
         cars: [
-            {name: '',        col: 1, speed: 95, top:  1300, img: 'car',        dialog: ""},
-            {name: '',        col: 2, speed: 95, top:  1100, img: 'car',        dialog: ""},
-            {name: '',        col: 3,   speed: 95,  top:  1300, img: 'car',   dialog: ""},
-            {name: '',        col: 1, speed: 95, top: 500 + 1300, img: 'car',        dialog: ""},
-            {name: '',        col: 2, speed: 95, top: 500 + 1100, img: 'car',        dialog: ""},
-            {name: '',        col: 3,   speed: 95,  top: 500 + 1300, img: 'car',   dialog: ""},
+            {name: '',        col: 1, speed: 124, top:  500, img: 'car_yellow',        dialog: "堵车的尽头是一马平川"},
+            {name: '',        col: 1, speed: 95, top:  1300, img: 'car',        dialog: "高速就是得稳着开"},
+            {name: '',        col: 2, speed: 95, top:  1100, img: 'car',        dialog: "我有错吗"},
+            {name: '',        col: 3,   speed: 95,  top:  1300, img: 'car',   dialog: "我正常行驶中"},
+            {name: '',        col: 1, speed: 95, top: 500 + 1300, img: 'car',        dialog: "我不急"},
+            {name: '',        col: 2, speed: 95, top: 500 + 1100, img: 'car',        dialog: "我也不急"},
+            {name: '',        col: 3,   speed: 95,  top: 500 + 1300, img: 'car',   dialog: "我更不急"},
             {name: '',        col: 1, speed: 95, top: 500 * 2 + 1300, img: 'car',        dialog: ""},
             {name: '',        col: 2, speed: 95, top: 500 * 2 + 1100, img: 'car',        dialog: ""},
             {name: '',        col: 3,   speed: 95,  top: 500 * 2 + 1300, img: 'car',   dialog: ""},
@@ -130,7 +132,43 @@ const sceneList = [
         cars: [
             {name: '',        col: 1, speed: 120, top:  1100, img: 'car',        dialog: "那句话真没错，无论你跑多快，总有一个大众会超你。"},
             {name: '',        col: 3,   speed: 95,  top:  1500, img: 'car_mini',   dialog: ""},
+            {name: '',        col: 2,   speed: 150, top:  900, img: 'car_yellow', dialog: "我只是不喜欢跟别人一起跑而已"},
+        ]
+    },
+
+    // scene 6   // 我真聪明
+    {
+        title: '我真聪明',
+        cars: [
+            {name: '',        col: 1, speed: 120, top:  1100, img: 'car',        dialog: "SB"},
+            {name: '',        col: 4, speed: 120, top:  1100, img: 'car',        dialog: "还是我聪明，妈妈都夸我"},
+            {name: '',        col: 4, speed: 120, top:  1800, img: 'car',        dialog: "我也聪明"},
+            {name: '',        col: 3,   speed: 95,  top:  1500, img: 'car_mini',   dialog: "SB"},
+            {name: '',        col: 1,   speed: 120, top:  1500, img: 'car_yellow', dialog: "SB"},
+        ]
+    },
+
+    // scene 7   // 无论你跑多快，总有一个大众会超你
+    {
+        title: '大众封神',
+        cars: [
+            {name: '',        col: 1, speed: 120, top:  1100, img: 'car',        dialog: "那句话真没错，无论你跑多快，总有一个大众会超你。"},
+            {name: '',        col: 3,   speed: 95,  top:  1500, img: 'car_mini',   dialog: ""},
             {name: '',        col: 2,   speed: 150, top:  900, img: 'car_yellow', dialog: "我只能从右侧超车了"},
         ]
     },
+
+    // scene 8   // 无论你跑多快，总有一个大众会超你
+    {
+        title: '我',
+        cars: [
+            {name: '',        col: 1, speed: 120, top:  1100, img: 'car',        dialog: ""},
+            {name: '',        col: 2, speed: 110, top:  1500, img: 'car',        dialog: ""},
+            {name: '',        col: 1, speed: 120, top:  1800, img: 'car',        dialog: ""},
+            {name: '',        col: 2,   speed: 110,  top:  2000, img: 'car_mini',   dialog: ""},
+            {name: '',        col: 3,   speed: 176, top:  1000, img: 'car_yellow', dialog: "我只是不要命"},
+        ]
+    },
 ]
+
+

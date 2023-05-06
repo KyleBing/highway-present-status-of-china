@@ -297,6 +297,7 @@
 }
 
 body {
+  min-width: 1160px;
   background-color: #404447;
 }
 
@@ -402,7 +403,37 @@ body {
   position: absolute;
   width: 100%;
   text-align: center;
-  text-shadow: 3px 3px 0 black;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-flow: column nowrap;
+  height: 250px;
+  padding-bottom: 30px;
+  background: linear-gradient(60deg, #FF9500, #FFCC00, #4CD964, #5AC8FA, #007AFF, #5856D6, #FF3B30);
+  z-index: 10000;
+}
+.intro h1 {
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4), 2px 2px 5px rgba(255, 149, 0, 0.9);
+}
+.intro p {
+  font-size: 13px;
+  margin-top: 20px;
+  color: white;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.intro a {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 13px;
 }
 
 /*# sourceMappingURL=highway.css.map */
