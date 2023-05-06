@@ -150,16 +150,6 @@ const sceneList = [
 
     // scene 7   // 无论你跑多快，总有一个大众会超你
     {
-        title: '大众封神',
-        cars: [
-            {name: '',        col: 1, speed: 120, top:  1100, img: 'car',        dialog: "那句话真没错，无论你跑多快，总有一个大众会超你。"},
-            {name: '',        col: 3,   speed: 95,  top:  1500, img: 'car_mini',   dialog: ""},
-            {name: '',        col: 2,   speed: 150, top:  900, img: 'car_yellow', dialog: "我只能从右侧超车了"},
-        ]
-    },
-
-    // scene 8   // 无论你跑多快，总有一个大众会超你
-    {
         title: '我',
         cars: [
             {name: '',        col: 1, speed: 120, top:  1100, img: 'car',        dialog: ""},
