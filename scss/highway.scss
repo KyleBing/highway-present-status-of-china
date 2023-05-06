@@ -16,19 +16,24 @@ body{
 }
 
 .container {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
     position: relative;
 }
 
 .highway-road {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
+    margin: 0 auto;
+    width: 150px * 2 + 200 * 4 + 12 * 5;
+    position: relative;
+}
+
+.road {
+    width: 150px * 2 + 200 * 4 + 12 * 5;
 }
 
 .highway-section {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .plant-section{
@@ -71,34 +76,43 @@ body{
 }
 
 .car-list{
+    width: 150px * 2 + 200 * 4 + 12 * 5;
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
 }
-.car{
+.car {
     position: absolute;
     z-index: 100;
     width: 110px;
-    img{
+    img {
+        margin-top: 10px;
         display: block;
         width: 100%;
     }
-    &.car-2{
-        top: 600px;
-        left: 570px + (200 + 20) * 1;
+    .speed{
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
     }
-    &.car-3{
-        top: 500px;
-        left: 570px + (200 + 20) * 2;
+    .dialog {
+        margin-top: 10px;
+        font-size: 14px;
+        border: 1px solid $color-border;
+        background-color: white;
+        @include border-radius(10px);
+        padding: 10px;
     }
-    &.car-4{
-        top: 1000px;
-        left: 570px + (200 + 20) * 2;
-    }
-    &.car-5{
-        top: 1200px;
-        left: 570px + (200 + 20) * 0;
-    }
+}
+
+.scene-title{
+    font-size: 60px;
+    color: $yellow;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    text-shadow: 3px 3px 0 black;
 }
