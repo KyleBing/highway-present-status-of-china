@@ -82,7 +82,7 @@ const sceneList = [
             {name: '',        col: 2,   speed: 100, top: 900,              img: 'car',        dialog: ""},
             {name: '',        col: 3,   speed: 100, top: 2100,             img: 'car_jeep',   dialog: ""},
             {name: '',        col: 3,   speed: 100, top: 1000,             img: 'truck',      dialog: ""},
-            {name: '',        col: 1,   speed: 110, top: 1600,             img: 'car_yellow', dialog: "左边那个 SB，闪不动你了还。在超车道，应该快点走，避免三车并排，可真行，逛上大街了还。速度压的是真稳。"},
+            {name: '',        col: 1,   speed: 110, top: 1600,             img: 'car_yellow', dialog: "左边那个，闪不动你了还。在超车道，应该快点走，避免三车并排，可真行，逛上大街了还。速度压的是真稳。"},
         ]
     },
 
